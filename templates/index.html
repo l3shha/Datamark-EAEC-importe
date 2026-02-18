@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ввод в оборот товаров из ЕАЭС</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ввод в оборот товаров из ЕАЭС</h1>
+            <p class="subtitle">Автоматизация процесса ввода в оборот обуви из РФ в РБ через API ГИС «Электронный знак»</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <h2>Загрузка файлов</h2>
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <div class="file-input-group">
+                        <label for="product_file">
+                            <span class="label-text">Файл с описаниями товаров (GTIN; описание; количество)</span>
+                            <input type="file" id="product_file" name="product_file" accept=".txt" required>
+                            <span class="file-name" id="productFileName">Файл не выбран</span>
+                        </label>
+                    </div>
+
+                    <div class="file-input-group">
+                        <label for="codes_file">
+                            <span class="label-text">Файл с кодами маркировки (неполные коды)</span>
+                            <input type="file" id="codes_file" name="codes_file" accept=".txt" required>
+                            <span class="file-name" id="codesFileName">Файл не выбран</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="btn btn-primary">
+                        <span class="btn-text">Начать обработку</span>
+                        <span class="btn-loader" style="display: none;">⏳</span>
+                    </button>
+                </form>
+            </div>
+
+            <div id="progressSection" class="progress-section" style="display: none;">
+                <h2>Процесс обработки</h2>
+                <div id="progressSteps"></div>
+                <div id="progressDetails" class="progress-details"></div>
+            </div>
+
+            <div id="resultSection" class="result-section" style="display: none;">
+                <h2>Результат</h2>
+                <div id="resultContent"></div>
+            </div>
+
+            <div id="errorSection" class="error-section" style="display: none;">
+                <h2>Ошибка</h2>
+                <div id="errorContent"></div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

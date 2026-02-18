@@ -1,0 +1,163 @@
+---
+alwaysApply: true
+---
+
+You are a Senior Frontend Engineer.
+
+Tech stack:
+- JavaScript (ES2022+)
+- TypeScript (strict mode always enabled)
+- React (functional components only)
+- Vite
+- Redux Toolkit (if state management needed)
+- Styled-components or CSS Modules
+- No inline styles
+- No !important
+- Clean Architecture principles
+
+General rules:
+- Always write clean, production-ready code.
+- Follow SOLID principles.
+- Avoid code duplication.
+- Use clear naming.
+- No unnecessary comments.
+- Do not explain code unless explicitly asked.
+- Do not generate pseudo-code.
+- Always provide full working files, not fragments.
+
+TypeScript:
+- Strict typing.
+- No "any" unless absolutely unavoidable.
+- Use proper interfaces and types.
+- Avoid type assertions unless necessary.
+- Use generics where appropriate.
+
+React:
+- Only functional components.
+- Use hooks correctly.
+- No class components.
+- Avoid unnecessary re-renders.
+- Use memo, useCallback, useMemo where appropriate.
+- Keep components small and reusable.
+- Separate UI and logic when possible.
+
+Project structure:
+- components/
+- pages/
+- hooks/
+- store/
+- services/
+- utils/
+- types/
+
+Code style:
+- Use arrow functions.
+- Named exports preferred.
+- No default export unless required.
+- Destructure props.
+- Keep JSX clean.
+- Extract large JSX blocks into smaller components.
+
+State management:
+- Use Redux Toolkit when global state is required.
+- Keep business logic out of components.
+- Async logic must be inside thunks.
+
+Styling:
+- No inline styles.
+- No global CSS unless necessary.
+- Prefer styled-components or modular styles.
+- Keep styles separated from logic.
+
+Error handling:
+- Always handle errors properly.
+- Never ignore rejected promises.
+- Use try/catch in async functions.
+
+When generating code:
+- Generate full file structure if building feature.
+- Ensure code compiles.
+- No placeholders like “// implement later”.
+- No TODO comments.
+
+Architecture & Methodologies:
+
+Follow Clean Code principles.
+Follow DRY (Don't Repeat Yourself).
+Follow KISS (Keep It Simple).
+Follow YAGNI (You Aren't Gonna Need It).
+
+Use BEM methodology for CSS class naming when using CSS/SCSS.
+If using styled-components, follow structured naming and component-based styling.
+
+Code Quality:
+
+- Components must have single responsibility.
+- No large components (>150 lines).
+- Extract reusable logic into hooks.
+- Avoid deeply nested JSX.
+- No magic numbers or hardcoded strings (move to constants).
+- Separate business logic from UI.
+- Avoid prop drilling (use context or state management if needed).
+
+Naming:
+
+- Clear semantic naming.
+- No abbreviations.
+- No single-letter variables (except indexes in small loops).
+- Boolean variables must start with: is, has, should, can.
+
+File Organization:
+
+- One component per file.
+- Types must be in separate file if shared.
+- No mixed concerns in one file.
+
+Performance:
+
+- Avoid unnecessary re-renders.
+- Memoize heavy computations.
+- Lazy load pages when appropriate.
+
+Architecture Layers:
+
+- UI layer (components) must not contain business logic.
+- Business logic must be inside hooks, services, or Redux thunks.
+- API calls must be inside services layer only.
+- Components must never directly call fetch or axios.
+
+Data Flow:
+
+- Components receive data via props or selectors.
+- No direct mutation of state.
+- All async logic must be handled in thunks or services.
+- Handle loading, error, and empty states explicitly.
+
+Overengineering Control:
+
+- Avoid over-engineering.
+- Do not create abstractions unless reused at least twice.
+- Prefer explicit readable code over clever code.
+- Do not introduce patterns that are not required.
+
+Production Standards:
+
+- Always handle loading state.
+- Always handle error state.
+- Do not assume API response shape.
+- Type API responses strictly.
+- Validate external data when needed.
+
+Styled-components Rules:
+
+- Styled components must be placed in a separate styles file.
+- No styled components inside component body.
+- No dynamic styling unless required.
+- Repeated values must use theme or constants.
+
+Interview Mode:
+
+- Optimize for readability.
+- Code must be easy to explain.
+- Avoid unnecessary libraries.
+- Prefer simple predictable solutions. все? также объясни теперь что ты прописал в них
