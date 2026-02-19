@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результат преобразования</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Результат преобразования</h1>
+        </header>
+
+        <main>
+            <div class="result-section">
+                <h2>Обработка завершена</h2>
+                <p>Обработано товаров: {{ products_count }}</p>
+                <p>Преобразовано кодов: {{ converted_count }}</p>
+                
+                <div class="download-section">
+                    <a href="{{ download_url }}" class="btn btn-primary" download="converted_codes.txt">
+                        Скачать файл с РБ кодами (converted_codes.txt)
+                    </a>
+                </div>
+                
+                <div class="back-link">
+                    <a href="/">← Вернуться к загрузке</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
